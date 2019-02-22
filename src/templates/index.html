@@ -1,0 +1,65 @@
+
+<#include "common/header.html" />
+
+<h1>${name}</h1>
+<p>${global_var}</p>
+
+<h1>fis3 static demo</h1>
+<div class="box">
+  <h2>test img</h2>
+  <div class="primary">box</div>
+  <img class="primary" src="/src/static/images/me.jpg" alt="me">
+</div>
+
+<div>
+  <h2>mock test</h2>
+  <button id="mock-btn">测试mock</button>
+  <a href="/hello/redirect"> test redirect</a>
+  <button id="proxy-btn"> test proxy</button>
+</div>
+
+<div class="background-size">
+  <h2>background-size 测试 sprite 测试</h2>
+  <div class="firefox firefox-size">&nbsp;</div>
+  <div class="chrome chrome-size">&nbsp;</div>
+  <div class="facebook facebook-size">&nbsp;</div>
+  <div class="facebook-right">&nbsp;</div>
+  <div class="big-image">&nbsp;</div>
+</div>
+
+<#include "common/footer.html" />
+
+<script>
+  $(function () {
+    $('h2').html('test htmlmin js');
+
+
+    $('#mock-btn').on('click', function () {
+      $.ajax('/test/mock', {
+        success: function (data) {
+          console.log(data);
+        },
+        fail: function (data) {
+          console.log(data);
+        }
+      })
+    });
+
+    $('#proxy-btn').on('click', function () {
+      $.ajax('/test/proxy', {
+        success: function (data) {
+          console.log(data);
+        },
+        fail: function (data) {
+          console.log(data);
+        }
+      })
+    });
+
+
+  });
+
+
+</script>
+</body>
+</html>

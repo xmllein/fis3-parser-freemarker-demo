@@ -1,0 +1,8 @@
+{
+	"success": 0,
+	"message": "ok1",
+	"data": {
+		"uname": "foo",
+		"uid": 1
+	}
+}

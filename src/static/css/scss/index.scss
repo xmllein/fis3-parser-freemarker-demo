@@ -1,0 +1,48 @@
+@mixin colors($text, $background, $border) {
+	color: $text;
+	background-color: $background;
+	border-color: $border;
+	width: 200px;
+	height: 200px;
+	border-style: solid;
+	border-width: 5px;
+}
+
+$values: #ff0000, #00ff00, #0000ff;
+.primary {
+	@include colors($values...);
+}
+
+.firefox {
+	background: url('../../images/icon/Firefox.png?__sprite=group_z') no-repeat;
+	width: 256px;
+	height: 256px;
+	display: inline-block;
+}
+
+.chrome {
+	background: url('../../images/icon/Chrome.png?__sprite=group_z') no-repeat;
+	width: 256px;
+	height: 256px;
+	display: inline-block;
+}
+.facebook {
+	background: url('../../images/icon/Facebook.png?__sprite=group_x') no-repeat;
+	width: 256px;
+	height: 256px;
+	display: inline-block;
+}
+
+.facebook-right {
+	background: url('../../images/icon/index-02-icon5.png?__sprite=group_x') no-repeat right top;
+	width: 135px;
+	height: 135px;
+	display: inline-block;
+}
+
+.big-image {
+	width: 135px;
+	height: 135px;
+	background: url('../../images/icon/index-02-icon6.png?__sprite=group_x') no-repeat;
+}
+

@@ -1,0 +1,25 @@
+{
+  "name": "fis3-parser-freemarker-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bs-config.js",
+  "scripts": {
+	  "start": "shx rm -rf ./dev && fis3 release dev -w",
+	  "server": "sudo fis3 server start --type browsersync --root ./dev --bs-config bs-config.js",
+	  "clear": "shx rm -rf ./dev",
+	  "dist": "shx rm -rf ./dist",
+	  "stop": "sudo fis3 server stop --type --bs-config bs-config.js && shx rm -rf ./dev",
+	  "build": "shx rm -rf ./dist && fis3 release build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmllein/fis3-parser-freemarker-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xmllein/fis3-parser-freemarker-demo/issues"
+  },
+  "homepage": "https://github.com/xmllein/fis3-parser-freemarker-demo#readme"
+}
